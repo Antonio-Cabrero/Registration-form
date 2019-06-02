@@ -10,26 +10,23 @@
     <header id="header">
       <h1 class="title">THE CODE REVIEW</h1>
     </header>
-    <div class="form-wrap">
-      <div class="form-header">
+      <form class="form" action="index.html" method="post">
         <h2>Signup for our newsletter</h2>
         <p>Get the latest news on how your code is doing right in your inbox.</p>
-      </div>
-      <form class="form" action="index.html" method="post">
       <fieldset id="user_info" class="user_info" name="user_info">
         <legend><h2>Contact Information</h2></legend><br>
         <label for="full_name">Full Name</label><br>
-        <input id="full_name" class="input info" type="text" name="full_name" placeholder="Required" required><br>
+        <input id="full_name" type="text" name="full_name" placeholder="Required" required><br>
         <label for="email">Email Address</label><br>
-        <input id="email" class="input info" type="email" name="user_email" placeholder="Required" required><br>
+        <input id="email" type="email" name="user_email" placeholder="Required" required><br>
         <label for="phone">Phone Number</label><br>
-        <input id="phone" class="input info" type="tel" name="users_phone"><br>
+        <input id="phone" type="tel" name="users_phone"><br>
         <label for="address">Street Address</label><br>
-        <input type="text" class="input info" name="user_address"><br>
+        <input type="text"  name="user_address"><br>
         <label for="city">City</label><br>
-        <input id="city" class="input info" type="text" name="user_city"><br>
+        <input id="city" type="text" name="user_city"><br>
         <label for="country">Country</label><br>
-        <select id="country" class="input info" name="user_country"><br>
+        <select id="country" name="user_country"><br>
         <option value="country-options">Choose Country</option>
         <optgroup label="Most Common">
           <option value="uk">UK</option>
@@ -45,30 +42,29 @@
         </optgroup>
       </select><br>
         <label for="zip_code">Zip Code</label><br>
-        <input id="zip_code" class="input info" type="text" name="user_zip-code"><br>
+        <input id="zip_code" type="text" name="user_zip-code"><br>
       </fieldset>
       <fieldset id="newsletter">
         <legend><h2>Newsletter</h2></legend><br>
         <!-- Checkbox -->
-        <label>Select the newsletter you would like to recieve</label><br>
-        <input id="html_news" class="input news" type="checkbox" name="newsletter_type">
+        <label>Select the newsletter you would like to recieve</label><br><br>
+        <input id="html_news" type="checkbox" name="newsletter_type">
         <label for="html_news">HTML News</label><br>
-        <input id="css_news" class="input news"type="checkbox" name="newsletter_type">
+        <input id="css_news" type="checkbox" name="newsletter_type">
         <label for="css_news">CSS News</label><br>
-        <input id="javascript_news" class="input news" type="checkbox" name="newsletter_type">
-        <label for="javascript_news">JavaScript News</label><br>
+        <input id="javascript_news" type="checkbox" name="newsletter_type">
+        <label for="javascript_news">JavaScript News</label><br><br>
         <!---Radio-->
-        <label>Newsletter Format</label><br>
+        <label>Newsletter Format</label><br><br>
         <input id="html_format" type="radio" name="newsletter_format">
         <label for="html_format">HTML</label><br>
         <input id="plain_text_format" type="radio" name="newsletter_format">
-        <label for="plain_text_format">Plain Text</label><br>
+        <label for="plain_text_format">Plain Text</label><br><br>
         <label for="user_opinion">Other topics you'd like to hear about</label><br>
         <textarea id="user_opinion" name="user_opinion"></textarea><br>
-        <input id="submit" type="submit" name="signup_submit" value="Sign Up">
       </fieldset>
+      <input id="submit" type="submit" name="signup_submit" value="Sign Up">
       </form>
-    </div>
     <footer id="footer">
       <h3> &copy;Copyright The Code Review</h3>
     </footer>
