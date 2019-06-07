@@ -23,12 +23,14 @@ header {
 }
 
 h1,
+h2,
 h3 {
   margin: 10px 0;
   text-align: center;
 }
 
 h2{
+  margin: 0;
   color: #2D3945;
   padding-top: 15px
 }
@@ -36,7 +38,6 @@ h2{
 fieldset {
   margin-top: 10px;
   border: none;
-  box-sizing: border-box;
   width: 100%;
 }
 
@@ -54,6 +55,53 @@ p{
   border-bottom: 3px solid #2d3945;
 }
 
+/*  DRY CSS   */
+
+
+.form,
+#user_info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+label:nth-of-type(1n) {
+  font-size: 1.15em;
+  color: #2D3945;
+  opacity: 0.8;
+  margin: 15px 0;
+  width: 100%;
+}
+
+ input[type="text"],
+ input[type="email"],
+ input[type="tel"],
+ #country,
+ #user_opinion
+ {
+  border: none;
+  background-color: #f2f2f2;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 100%;
+ }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  #country:focus,
+  #user_opinion:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #2D3945;
+  }
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 12px 0;
+}
+
 /*  Element Stylings    */
 
 .form {
@@ -67,11 +115,15 @@ p{
   border-bottom: 2.5px solid #2D3945;
 }
 
+
 #newsletter {
   margin-top: 25px;
 }
   #newsletter label {
     margin: 20px 0;
+  }
+  #newsletter h2 {
+    margin-bottom: 20px;
   }
 
 #full_name::placeholder,
@@ -80,6 +132,21 @@ p{
   letter-spacing: 1.5;
   text-align: right;
   font-style: italic;
+  padding: 0 10px 0 0;
+}
+
+#user_opinion {
+  height: 100px;
+  width: 98%;
+}
+
+#user_opinion::placeholder {
+padding-left: 8px;
+padding-top: 5px;
+width: 100%;
+opacity: 0.50;
+letter-spacing: 1.5;
+font-style: italic;
 }
 
 #zip_code {
@@ -87,9 +154,11 @@ p{
 }
 
 #user_opinion {
-  padding: 15px 3px;
+  padding: 0 3px;
   margin: 25px 0;
-}
+  height: 100px;
+  resize: none;
+  }
 
 #submit {
   padding: 20px 10px;
@@ -110,44 +179,21 @@ p{
   letter-spacing: 1.2px;
   padding-bottom: 20vh;
 }
-/*  DRY CSS   */
 
-
-.form,
-#user_info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-
-label:nth-of-type(1n) {
-  font-size: 1.15em;
-  color: #2D3945;
-  opacity: 0.8;
-  width: 100%;
-}
-
- input[type="text"],
- input[type="email"],
- input[type="tel"],
- #country,
- #user_opinion
- {
-  border: none;
-  background-color: #f2f2f2;
-  padding: 20px 10px;
-  border-radius: 5px;
-  font-size: 18px;
-  width: 92%;
- }
- 
-
-
-input[type="checkbox"],
-input[type="radio"] {
-  margin: 12px 0;
-}
 
 
 /*  Media Query  */
+
+@media (min-width: 768px) {
+
+#user_info {
+  flex-direction: row;
+}
+
+#user_info input,
+#user_info label {
+  display: inline-flex;
+}
+
+
+}
