@@ -17,7 +17,7 @@ header {
   color: #fff;
   width: 100%;
   padding: 15px 0;
-  letter-spacing: 1.4;
+  letter-spacing: 1.4px;
 }
 
 h1,
@@ -27,12 +27,6 @@ h3 {
   text-align: center;
 }
 
-h2{
-  margin: 0;
-  color: #2D3945;
-  padding-top: 15px
-}
-
 fieldset {
   margin-top: 10px;
   border: none;
@@ -40,7 +34,10 @@ fieldset {
 }
 
 legend {
-  font-size: 1em;
+  color: #2D3945;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -106,22 +103,19 @@ input[type="radio"] {
   width: 90%;
   margin: 0 auto;
   padding-top: 15px;
+  max-width: 960px;
 }
 
 
 #zip_code {
   width: 30%;
-  margin-bottom: 45px;
 }
 
 #user_info {
-  padding-bottom: 15px;
+  padding-bottom: 45px;
   border-bottom: 2.5px solid #2D3945;
 }
 
-#newsletter {
-  margin-top: 25px;
-}
   #newsletter label {
     line-height: 1.6;
     margin: 20px 0;
@@ -133,7 +127,7 @@ input[type="radio"] {
 #full_name::placeholder,
 #email::placeholder {
   opacity: 0.50;
-  letter-spacing: 1.5;
+  letter-spacing: 1.5px;
   text-align: right;
   font-style: italic;
   padding: 0 10px 0 10px;
@@ -157,9 +151,9 @@ input[type="radio"] {
     padding-top: 5px;
     text-indent: 10px;
     width: 100%;
-    letter-spacing: 1.5;
+    letter-spacing: 1.5px;
     font-style: italic;
-    overflow-wrap: auto
+    overflow-wrap: normal;
     }
 
 #submit {
