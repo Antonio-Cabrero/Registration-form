@@ -101,7 +101,10 @@ input[type="radio"] {
   width: 90%;
   margin: 0 auto;
   padding-top: 15px;
+  padding: 0 10px;
   max-width: 960px;
+  border-radius: 10px;
+  background-color: rgb(250, 250, 250);
 }
 
 
@@ -130,9 +133,6 @@ input[type="radio"] {
     line-height: 1.6;
     margin: 10px 0;
   }
-.newsletter h2 {
-    margin-bottom: 20px;
-  }
 
 .news-wrap {
   display: flex;
@@ -147,6 +147,15 @@ input[type="radio"] {
 
 .news-wrap label {
   width: 95%;
+}
+
+#user_opinion {
+  border: none;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 100%;
+  text-indent: 10px;
 }
 
 #full_name::placeholder,
