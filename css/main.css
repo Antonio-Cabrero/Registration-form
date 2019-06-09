@@ -28,7 +28,6 @@ h3 {
 }
 
 fieldset {
-  margin-top: 10px;
   border: none;
   width: 100%;
 }
@@ -36,7 +35,6 @@ fieldset {
 legend {
   color: #2D3945;
   padding-top: 35px;
-  padding-bottom: 20px;
   font-size: 1.3em;
   font-weight: bold;
 }
@@ -53,7 +51,7 @@ p{
 /*  DRY CSS   */
 
 .form,
-.fieldset-wrap {
+.info-wrap  {
   display: flex;
   flex-direction: column;
 }
@@ -111,18 +109,45 @@ input[type="radio"] {
   width: 30%;
 }
 
-#user_info {
+.user_info {
   padding-bottom: 45px;
   border-bottom: 2.5px solid #2D3945;
 }
-
-  #newsletter label {
-    line-height: 1.6;
-    margin: 20px 0;
+  .user_info legend {
+    margin-bottom: 10px;
   }
-  #newsletter h2 {
+
+.newsletter p {
+  border: none;
+  text-align: left;
+  margin-top: 10px;
+  padding: 15px 0;
+  width: 100%;
+  color: #2D3945;
+}
+
+.newsletter label {
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+.newsletter h2 {
     margin-bottom: 20px;
   }
+
+.news-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.news-wrap input {
+  width: 5%;
+}
+
+.news-wrap label {
+  width: 95%;
+}
 
 #full_name::placeholder,
 #email::placeholder {
@@ -169,7 +194,7 @@ input[type="radio"] {
 } 
 
 
-#footer {
+.footer {
   color: #d0d0d0;
   padding-top: 5vh;
   font-size: 14px;
@@ -184,13 +209,13 @@ input[type="radio"] {
 
 @media (min-width: 768px) {
 
-   .fieldset-wrap {
+   .info-wrap {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .fieldset-wrap label,
-  .fieldset-wrap input,
+  .info-wrap label,
+  .info-wrap input,
   #country {
     margin: 20px 0;
     display: flex;
@@ -198,7 +223,7 @@ input[type="radio"] {
     align-self: center
   }
   
-  .fieldset-wrap label {
+  .info-wrap label {
     flex: 1;
     flex-basis: 20%;
   }

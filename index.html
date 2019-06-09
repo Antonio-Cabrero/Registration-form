@@ -7,15 +7,15 @@
     <title>The Code Review</title>
   </head>
   <body>
-    <header id="header">
+    <header class="header">
       <h1 class="title">THE CODE REVIEW</h1>
     </header>
       <form class="form" action="index.html" method="post">
         <h2>Signup for our newsletter</h2>
         <p>Get the latest news on how your code is doing right in your inbox.</p>
-      <fieldset id="user_info" name="user_info">
+      <fieldset class="user_info" name="user_info">
         <legend>Contact Information</legend>
-        <div class="fieldset-wrap" >
+        <div class="info-wrap" >
         <label for="full_name">Full Name</label>
         <input id="full_name" type="text" name="full_name" placeholder="Required" required>
         <label for="email">Email Address</label>
@@ -46,28 +46,30 @@
         <input id="zip_code" type="text" name="user_zip-code">
       </div> 
       </fieldset>
-      <fieldset id="newsletter">
+      <fieldset class="newsletter">
         <legend>Newsletter</legend>
         <!-- Checkbox -->
-        <label>Select the newsletter you would like to recieve</label><br><br>
+        <p>Select the newsletter you would like to recieve</p>
+        <div class="news-wrap">
         <input id="html_news" type="checkbox" name="newsletter_type">
-        <label for="html_news">HTML News</label><br>
+        <label for="html_news">HTML News</label>
         <input id="css_news" type="checkbox" name="newsletter_type">
-        <label for="css_news">CSS News</label><br>
+        <label for="css_news">CSS News</label>
         <input id="javascript_news" type="checkbox" name="newsletter_type">
-        <label for="javascript_news">JavaScript News</label><br><br>
+        <label for="javascript_news">JavaScript News</label>
         <!---Radio-->
-        <label>Newsletter Format</label><br><br>
+        <p>Newsletter Format</p>
         <input id="html_format" type="radio" name="newsletter_format">
-        <label for="html_format">HTML</label><br>
+        <label for="html_format">HTML</label>
         <input id="plain_text_format" type="radio" name="newsletter_format">
-        <label for="plain_text_format">Plain Text</label><br><br>
-        <label for="user_opinion">Other topics you'd like to hear about</label><br>
+        <label for="plain_text_format">Plain Text</label>
+        <label for="user_opinion">Other topics you'd like to hear about</label>
         <textarea id="user_opinion" name="user_opinion" placeholder="Vue.js news, React.js news..."></textarea><br>
+       </div>
       </fieldset>
       <input id="submit" type="submit" name="signup_submit" value="Sign Up">
       </form>
-    <footer id="footer">
+    <footer class="footer">
       <h3> &copy;Copyright The Code Review</h3>
     </footer>
   </body>
